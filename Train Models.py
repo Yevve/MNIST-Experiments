@@ -11,6 +11,7 @@ import numpy as np
 import datetime
 import shutil
 
+# python -m tensorboard.main --logdir logs/fit    for tensorboard boot up
 
 # Flagga för att ta bort all tidigare sparad logdata
 clean_logs = False
