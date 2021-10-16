@@ -6,10 +6,17 @@
 ![bild 0.4 och 1](fig/0.4_and_1.svg "0.4 = grå/orange  1 = röd/blå")
 
 # b.Vad händer om vi minskar storleken på våra träningsbatcher (batch_size)?Hur ändras prestandardenoch träningstiden.
+    En batch size är antalet träningsexempel i en iteration.Ju mer batch size ju mer minne behövs, därav ger minskad batch_size helt enkelt i en långsammare träningstid.
 
 # c.Hur skiljer de båda modellerna sig när det kommer till träningstid? Förklara lite kort om varförde skiljer sig åt.
+    CNN, convolutional model är mycket långsammare än non convolutional. CNN uppnår dock en högre accuracy.
+    En convolutional-neural-network är en subklass av neural-network som har åtminstone minst ett convolutional layer. Används exempelvis inom lokal information som t.ex pixlar som omgiver en pixel i en bild och minskar även komplexiteten i modellen.
+    I exemplet ovan skulle en non conventional å andra sidan gå igen alla pixlar.
+
+![körtid](fig/körtid.svg)
 
 # d.Hur skiljer sig resultatet mellan de olika testseten och varför kan vi se/inte se en skillnad?Är det samma skillnader för båda närverken?
+    
 
 # e.Vad händer om vi ökar antalet neuroner. Får vi ett bättre eller sämre resultat. Finns det någon undre eller övre gräns för vad som är bäst?
 

@@ -101,7 +101,7 @@ def non_convolutional_model():
     model.add(K.layers.Dense(10, activation="softmax"))
     
     model.compile(loss="categorical_crossentropy",
-                  optimizer=K.optimizers.SGD(lr=1),
+                  optimizer=K.optimizers.SGD(lr=0.4),
                   metrics=["accuracy"])
     return model
 
@@ -117,7 +117,7 @@ def convolutional_model():
     model.add(K.layers.Dense(10, activation="softmax"))
     
     model.compile(loss="categorical_crossentropy",
-                  optimizer=K.optimizers.SGD(lr=0.01), # lr 0.01 
+                  optimizer=K.optimizers.SGD(lr=0.4), # lr 0.01 
 
                   metrics=["accuracy"])
     return model
@@ -129,13 +129,13 @@ log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, profile_batch=0)
 
 # Välj en modell
-model = non_convolutional_model()
+model = convolutional_model()
 
 # Träna modellen
 model.fit(x_train, y_train,
       epochs=50, 
       validation_split=0.2, 
-      batch_size=256,
+      batch_size=128,
       verbose=1,
       callbacks=[tb_callback]
      )
