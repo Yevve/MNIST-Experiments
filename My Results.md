@@ -1,7 +1,8 @@
 
 # a.Går det snabbare att träna nätverken (i antalet epoker) om vi ökar inlärningshastigheten (lr) på nätverken. Kan vi ha en för stor inlärningshastighet och vad händer då?
     Högre inlärnings hastighet ökar epoch accuracy men för hög inlärnings hastighet gör så att accuracy minskar. Man måste hitta en equlibrium mellan hög och låg hastighet. Se graferna nedan.
-![bild 0.01 och 0.2](fig/0.01_and_0.2.svg)
+![bild 0.01 och 0.2](fig/0.01_and_0.2.svg"0.01 = blå/orange  0.2 = rosa/ljusblå")
+![bild 0.4 och 1](fig/0.4_and_1.svg"0.4 = grå/orange  1 = röd/blå")
 
 # b.Vad händer om vi minskar storleken på våra träningsbatcher (batch_size)?Hur ändras prestandardenoch träningstiden.
 
