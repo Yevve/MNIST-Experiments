@@ -16,7 +16,17 @@
 ![körtid](fig/körtid.svg)
 
 # d.Hur skiljer sig resultatet mellan de olika testseten och varför kan vi se/inte se en skillnad?Är det samma skillnader för båda närverken?
-    
+    Convolutional:
+        Moved Data:     15.63
+        Rotated Data:   82.51
+        Test Data:      96.75
+        Train Data:     99.18
+        
+    Non Convolutional:
+        Moved Data:     24.69
+        Rotated Data:   80.26
+        Test Data:      98.13
+        Train Data:     99.12
 
 # e.Vad händer om vi ökar antalet neuroner. Får vi ett bättre eller sämre resultat. Finns det någon undre eller övre gräns för vad som är bäst?
 
