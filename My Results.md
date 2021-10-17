@@ -16,17 +16,19 @@
 ![körtid](fig/körtid.svg)
 
 # d.Hur skiljer sig resultatet mellan de olika testseten och varför kan vi se/inte se en skillnad?Är det samma skillnader för båda närverken?
+    Som man ser på resultaten så har convolutional ett mycket strörre move data accuracy än non convolutional. När man kollar på resterande resulat så är inte skillnaded lika stora.
+
     Convolutional:
-        Moved Data:     15.63
-        Rotated Data:   82.51
-        Test Data:      96.75
-        Train Data:     99.18
+        Moved Data:     21.34
+        Rotated Data:   85.33
+        Test Data:      97.93
+        Train Data:     99.04
         
     Non Convolutional:
-        Moved Data:     24.69
-        Rotated Data:   80.26
-        Test Data:      98.13
-        Train Data:     99.12
+        Moved Data:     15.09
+        Rotated Data:   82.47
+        Test Data:      96.63
+        Train Data:     99.29
 
 # e.Vad händer om vi ökar antalet neuroner. Får vi ett bättre eller sämre resultat. Finns det någon undre eller övre gräns för vad som är bäst?
 
