@@ -31,6 +31,11 @@
         Train Data:     99.29
 
 # e.Vad händer om vi ökar antalet neuroner. Får vi ett bättre eller sämre resultat. Finns det någon undre eller övre gräns för vad som är bäst?
+    För testet användes neuron värdena 32,64,128,256,512,1024 i non_convolutional_model.
+    När man ökar antalet neuron så ökar accuracy men det kräver mer kraft/tid för att utföra beräkningar. Som vi ser på graferna så ökar epoch_accuracy för varje ökning av neuron antalet. Vi kan också se att vid 1024 och 512 antal neuroner så är ökningen minimal men det tar nästan dubbelt så lång tid per epoch (5ms för 512, 10ms 1024).
+    Den övre gränsen blir då 512 neuroner och den undre gränsen blir 128 neuroner enligt graferna.
+![Train](fig/neuronTrain.svg "Neuron Train graph")
+![Validation](fig/neuronValidation.svg "Neuron Validation graph") 
 
 # f.Öka området som analyseras åt gången medvårt ”convolutional neural network” (detta görs genom att öka värdet på vår kernel_size) och öka även storleken på stegen mellan varje yta som analyseras ” (detta görs genom att öka värdet på strides). Hur stora värden går det att ha på dessa parametrar innan prestandan börjar att sjunka. Vilka var de bästa värdena som du observerade?
 

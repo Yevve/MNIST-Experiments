@@ -97,7 +97,7 @@ def non_convolutional_model():
     model = K.Sequential()
     model.add(K.layers.Flatten())
     model.add(K.layers.Input(28*28))
-    model.add(K.layers.Dense(32, activation="relu"))
+    model.add(K.layers.Dense(1024, activation="relu"))   #32
     model.add(K.layers.Dense(10, activation="softmax"))
     
     model.compile(loss="categorical_crossentropy",
@@ -129,13 +129,13 @@ log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, profile_batch=0)
 
 # Välj en modell
-model = convolutional_model()
+model = non_convolutional_model()
 
 # Träna modellen
 model.fit(x_train, y_train,
       epochs=50, 
       validation_split=0.2, 
-      batch_size=128,
+      batch_size=256,
       verbose=1,
       callbacks=[tb_callback]
      )
