@@ -40,7 +40,9 @@
 # f.Öka området som analyseras åt gången medvårt ”convolutional neural network” (detta görs genom att öka värdet på vår kernel_size) och öka även storleken på stegen mellan varje yta som analyseras ” (detta görs genom att öka värdet på strides). Hur stora värden går det att ha på dessa parametrar innan prestandan börjar att sjunka. Vilka var de bästa värdena som du observerade?
 
 # g.Lägg till fler lager och testa om det blir bättre med djupare nätverk. Hur påverkas precisionen och träningstiden?
-
+    Fyra tester kördes med base (utan lager),1,2 och 3 antal lager (32,64,128 neuroner). Körnings tiden har gått upp en liten bit men inte så mycket.
+    Som vi ser på bilden nere så har träningn och validation accuracy ökat per lager. När det kom till moved och rotated accuracy så har moved accuracy minskat och rotated accuracy ökat per layer.
+![Layers](fig/layerTests.svg "Tests for layers")
 
 
 
