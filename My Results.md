@@ -35,9 +35,15 @@
     När man ökar antalet neuron så ökar accuracy men det kräver mer kraft/tid för att utföra beräkningar. Som vi ser på graferna så ökar epoch_accuracy för varje ökning av neuron antalet. Vi kan också se att vid 1024 och 512 antal neuroner så är ökningen minimal men det tar nästan dubbelt så lång tid per epoch (5ms för 512, 10ms 1024).
     Den övre gränsen blir då 512 neuroner och den undre gränsen blir 128 neuroner enligt graferna.
 ![Train](fig/neuronTrain.svg "Neuron Train graph")
-![Validation](fig/neuronValidation.svg "Neuron Validation graph") 
+![Validation](fig/neuronValidation.svg "Neuron Validation graph")
 
 # f.Öka området som analyseras åt gången medvårt ”convolutional neural network” (detta görs genom att öka värdet på vår kernel_size) och öka även storleken på stegen mellan varje yta som analyseras ” (detta görs genom att öka värdet på strides). Hur stora värden går det att ha på dessa parametrar innan prestandan börjar att sjunka. Vilka var de bästa värdena som du observerade?
+    Första testet som kördes var kernel_size (8,8) och strides (1,1). Resultatet i rotated data blev 88.3
+    Första testet som kördes var kernel_size (16,16) och strides (2,2) och resultatet på roterad data blev lite sämre(från 88.37 -> 86.26)
+    Andra testet som kördes var kernel_size(24,24) och strides (4,4) och resultatet blev ännu sämre: 75.2.
+
+    I bilden är den gråa kernel_size(8,8) och strides (1,1). Som visas syns det att resten av ökningarna ger sämre accuracy.
+![kernel](fig/kernel.svg)
 
 # g.Lägg till fler lager och testa om det blir bättre med djupare nätverk. Hur påverkas precisionen och träningstiden?
     Fyra tester kördes med base (utan lager),1,2 och 3 antal lager (32,64,128 neuroner). Körnings tiden har gått upp en liten bit men inte så mycket.
