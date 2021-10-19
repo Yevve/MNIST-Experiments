@@ -51,7 +51,7 @@
 ![Layers](fig/layerTests.svg "Tests for layers")
 
 
-
+# Fråga 8
 # Här är mina resultat hittils:
     För den första testet kördes väderna batch_size = 512, lr = 0.1 , 3 layers (32,64,128).
     Det gav värderna :
