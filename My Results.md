@@ -53,12 +53,60 @@
 
 
 # Här är mina resultat hittils:
+    För den första testet kördes väderna batch_size = 512, lr = 0.1 , 3 layers (32,64,128).
+    Det gav värderna :
+        Moved Data:     19.01
+        Rotated Data:   90.79
+        Test Data:      98.61
+        Train Data:     99.25
+    Det tog mindre tid att köra men accuracy var inte den bästa.
 
-I den här filen ska ni beskriva:
-- Era experiment
-- Era slutsatser
+    För den andra testet kördes värderna batch_size = 256 , lr = 0.1 , 2 layers (32,64)
+    Den gav värderna:
+        Moved Data:     21.38
+        Rotated Data:   91.31
+        Test Data:      98.88
+        Train Data:     99.74
+    Dessa värden gav att lite långsammare kör tid per epoch (2 sec mer) men accuracy har ökat.
 
-## Glöm inte!
+    För den tredje testet kördes värderna batch_size = 128 , lr = 0.1 , 2 layers (32,64)
+    Den gav värderna:
+        Moved Data:     21.62
+        Rotated Data:   90.39
+        Test Data:      98.88
+        Train Data:     99.76
+    För denna test så har vi testat sänka batch_size för att öka antal steg per epoch för att se om det kommer träna bättre. Körnings tiden har inte påverkats av detta. Moved data accuracy blev bättre men inte mycket, men rotated data accuracy har minskat.
 
-Glöm inte att ha med figurer:
+    För den fjärde testet kördes värderna batch_size = 128 , lr = 0.1 , 1 layer 32
+    Den gav värderna:
+        Moved Data:     21.46
+        Rotated Data:   90.29
+        Test Data:      98.88
+        Train Data:     99.75
+    För denna test så har vi testat sänka antalet lager men det orsakde till att accuracy har blivit sämmre och hastigheten var oförändrad.
+
+    För den femte testet kördes värderna batch_size = 128 , lr = 0.05 , 2 layers (32,64)
+    Den gav värderna:
+        Moved Data:     22.40
+        Rotated Data:   91.69
+        Test Data:      98.86
+        Train Data:     99.74
+    För denna test så har vi testat sänka inlärnings hastigheten och ta tillbaka ett lager (för att man fick sämmre resultat utan den). Det visade sig öka accuracy på både moved och rotated data samt det har inte ökat körnings tiden per epoch.
+
+    För den sjätte testet kördes värderna batch_size = 128 , lr = 0.05 , 2 layers (256,512)
+    Den gav värderna:
+        Moved Data:     21.32
+        Rotated Data:   92.01
+        Test Data:      98.92
+        Train Data:     99.75
+    För denna test så har vi testat öka antal neuroner i de två olika lager. Moved accuracy har minskat med rotated accuracy har ökat.
+
+
+    Från våra resultat kan vi se att test fem presterade bäst.
+
+
+
+
+
+
 
