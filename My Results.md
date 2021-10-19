@@ -103,7 +103,8 @@
 
 
     Från våra resultat kan vi se att test fem presterade bäst.
-
+    Flera lager kombinerat med än lägre learning rate än tidigare testat visade sig till slut vara den skillnaden som gav bäst resultat. Som etablerat redan i 7a visade sig att en högre inlärning gav upphov till ett bättre resultat, men inte allt för mycket. 0.5 visade sig i detta fall vara den gyllene gränsen.
+    Resten av siffrorna kom fram till genom att ta de som gav bäst resultat av tidigare tester, helt enkelt.
 
 
 
